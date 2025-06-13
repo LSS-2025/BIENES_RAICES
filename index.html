@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Descargar Archivos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    button {
+      background-color: #4ECDC4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background-color: #38b6ad;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Descargar archivos desde Google Docs</h2>
+
+  <button onclick="openPdf()">📄 Descargar PDF</button>
+  <button onclick="openWord()">📝 Descargar Word</button>
+
+  <script>
+    function openPdf() {
+      const url = 'https://docs.google.com/document/d/1kx6KQp-e8iItok153y-ToeO6wu7GW6YG/export?format=pdf';
+      window.open(url, '_blank');
+      alert('Se abrió el archivo PDF en una pestaña nueva.\nUsa el icono de descarga o "Guardar como..." para guardarlo.');
+    }
+
+    function openWord() {
+      const url = 'https://docs.google.com/document/d/1kx6KQp-e8iItok153y-ToeO6wu7GW6YG/export?format=docx';
+      window.open(url, '_blank');
+      alert('Se abrió el archivo Word en una pestaña nueva.\nUsa el icono de descarga o "Guardar como..." para guardarlo.');
+    }
+  </script>
+
+</body>
+</html>
